@@ -18,7 +18,18 @@ const project = {
     "今日心情：平穩中帶疲憊",
     "完成散步與整理房間",
     "親友已閱讀本週情緒摘要"
-  ]
+  ],
+  "ui": {
+    "eyebrow": "個人情緒照護",
+    "primaryNav": "新增心情",
+    "capabilityNav": "照護工具",
+    "flowNav": "每日節奏",
+    "actionLabel": "記錄今天",
+    "capabilityTitle": "照護工具",
+    "flowTitle": "每日照護節奏",
+    "recordTitle": "近期紀錄",
+    "operationNotice": "已移到心情紀錄區，可新增情緒、待辦與相簿回憶。"
+  }
 };
 
 const canvas = document.getElementById("visualCanvas");
@@ -198,7 +209,7 @@ function showNotice(action) {
   const notice = document.getElementById("notice");
   if (!notice) return;
   const map = {
-    operate: "操作中心已就緒，所有作業皆可處理。",
+    operate: project.ui?.operationNotice || "已定位到主要工作區。",
     deploy: "課程資源批次已建立。",
     audit: "課後統一診斷已完成。",
     start: "低衝擊訓練已開始。",
